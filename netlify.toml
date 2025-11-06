@@ -1,0 +1,71 @@
+# Netlify Configuration
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # No build command needed - this is a static site
+  publish = "."
+
+[build.environment]
+  # Set Node version if needed for any future build steps
+  NODE_VERSION = "18"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Content Security Policy
+    # Allow jsPDF from CDN, images from Unsplash, Ko-fi iframe and widget
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://storage.ko-fi.com;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https://images.unsplash.com https://storage.ko-fi.com;
+      font-src 'self' data:;
+      connect-src 'self' https://ko-fi.com;
+      frame-src https://ko-fi.com;
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self';
+    """
+
+    # Permissions Policy (formerly Feature-Policy)
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+
+# Cache static assets
+[[headers]]
+  for = "/src/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/src/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirect rules are in _redirects file
+
+# Development context (for deploy previews)
+[context.deploy-preview]
+  [context.deploy-preview.environment]
+    DEPLOY_ENV = "preview"
+
+# Production context
+[context.production]
+  [context.production.environment]
+    DEPLOY_ENV = "production"
+
+# Branch deploy context
+[context.branch-deploy]
+  [context.branch-deploy.environment]
+    DEPLOY_ENV = "branch"

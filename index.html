@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate a professional evaluation request letter to help your child get an IEP and access special education services.">
+    <title>Give My Kid an IEP! - Special Education Evaluation Request Letter Generator</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <!-- Ko-fi Widget -->
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#9673f5', 'Z8Z11O01HX');kofiwidget2.draw();</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Give My Kid an IEP!</h1>
+            <p class="tagline">Get Your Child the Support They Need - Request a Special Education Evaluation</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#form" aria-current="page">Generate Letter</a></li>
+                <li><a href="resources.html">Learn About Your Rights</a></li>
+                <li><a href="preparing.html">What to Expect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Every Child Deserves Support</h2>
+            <p>
+                If you believe your child may need special education services, federal law gives you the right
+                to request a <strong>free, comprehensive evaluation</strong> from your school district. This
+                evaluation is the first step toward getting an Individualized Education Program (IEP) that
+                provides the specialized support your child needs to succeed.
+            </p>
+            <p class="highlight">
+                This tool helps you generate a professional evaluation request letter to ensure the school
+                follows the law and evaluates your child promptly. Your written request starts the legal
+                timeline - the school must respond within a reasonable time.
+            </p>
+        </section>
+
+        <section id="form" class="form-section">
+            <h2>Generate Your Evaluation Request Letter</h2>
+            <p class="instructions">
+                Fill out the form below with your information. All information stays private on your device -
+                nothing is sent to a server. When you're done, you'll be able to download a professional PDF
+                letter to send to your school.
+                <br><br>
+                <strong>✓ Grammar & Spell Checking:</strong> This form works with Grammarly, LanguageTool, and other grammar checking browser extensions to help you write clear, professional descriptions.
+            </p>
+
+            <form id="letterForm">
+                <!-- Parent Information -->
+                <fieldset>
+                    <legend>Your Information (Parent/Guardian)</legend>
+
+                    <div class="form-group">
+                        <label for="parentName">Your Full Name *</label>
+                        <input type="text" id="parentName" name="parentName" required
+                               placeholder="Jane Smith" aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentAddress">Your Mailing Address *</label>
+                        <textarea id="parentAddress" name="parentAddress" required rows="3"
+                                  placeholder="123 Main Street&#10;Apartment 4B&#10;City, State 12345"
+                                  aria-required="true"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentPhone">Your Phone Number *</label>
+                            <input type="tel" id="parentPhone" name="parentPhone" required
+                                   placeholder="(555) 123-4567" aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="parentEmail">Your Email Address *</label>
+                            <input type="email" id="parentEmail" name="parentEmail" required
+                                   placeholder="jane.smith@email.com" aria-required="true">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Student Information -->
+                <fieldset>
+                    <legend>Student Information</legend>
+
+                    <div class="form-group">
+                        <label for="studentName">Student's Full Name *</label>
+                        <input type="text" id="studentName" name="studentName" required
+                               placeholder="John Smith" aria-required="true">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentGrade">Grade Level *</label>
+                            <input type="text" id="studentGrade" name="studentGrade" required
+                                   placeholder="3rd Grade" aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentDOB">Date of Birth *</label>
+                            <input type="date" id="studentDOB" name="studentDOB" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentTeacher">Current Teacher's Name</label>
+                        <input type="text" id="currentTeacher" name="currentTeacher"
+                               placeholder="Ms. Johnson">
+                        <small>Optional but helpful for the school to route your request</small>
+                    </div>
+                </fieldset>
+
+                <!-- School Information -->
+                <fieldset>
+                    <legend>School Information</legend>
+
+                    <div class="form-group">
+                        <label for="schoolName">School Name *</label>
+                        <input type="text" id="schoolName" name="schoolName" required
+                               placeholder="Lincoln Elementary School" aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="schoolAddress">School Address *</label>
+                        <textarea id="schoolAddress" name="schoolAddress" required rows="3"
+                                  placeholder="456 School Drive&#10;City, State 12345"
+                                  aria-required="true"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="principalName">Principal's Name *</label>
+                            <input type="text" id="principalName" name="principalName" required
+                                   placeholder="Dr. Sarah Johnson" aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="spedDirectorName">Special Education Director's Name</label>
+                            <input type="text" id="spedDirectorName" name="spedDirectorName"
+                                   placeholder="Michael Williams">
+                            <small>Optional - the school will route your request appropriately</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="districtName">School District Name *</label>
+                        <input type="text" id="districtName" name="districtName" required
+                               placeholder="City Unified School District" aria-required="true">
+                    </div>
+                </fieldset>
+
+                <!-- Areas of Concern -->
+                <fieldset>
+                    <legend>Areas of Concern</legend>
+
+                    <div class="form-group">
+                        <label>Select all areas where you have concerns: *</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="concernAreas" value="reading"> Reading/Literacy</label>
+                            <label><input type="checkbox" name="concernAreas" value="writing"> Writing</label>
+                            <label><input type="checkbox" name="concernAreas" value="math"> Math</label>
+                            <label><input type="checkbox" name="concernAreas" value="attention"> Attention/Focus/ADHD</label>
+                            <label><input type="checkbox" name="concernAreas" value="behavior"> Behavior/Emotional Regulation</label>
+                            <label><input type="checkbox" name="concernAreas" value="social"> Social Skills/Peer Relationships</label>
+                            <label><input type="checkbox" name="concernAreas" value="speech"> Speech/Language/Communication</label>
+                            <label><input type="checkbox" name="concernAreas" value="motor"> Fine or Gross Motor Skills</label>
+                            <label><input type="checkbox" name="concernAreas" value="sensory"> Sensory Processing</label>
+                            <label><input type="checkbox" name="concernAreas" value="adaptive"> Daily Living/Adaptive Skills</label>
+                            <label><input type="checkbox" name="concernAreas" value="cognitive"> Cognitive/Learning/Memory</label>
+                            <label><input type="checkbox" name="concernAreas" value="other"> Other (specify below)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="concernDescription">Describe Your Concerns *</label>
+                        <textarea id="concernDescription" name="concernDescription" required rows="6"
+                                  placeholder="Example: My child struggles to read at grade level, has difficulty staying focused on tasks, frequently becomes overwhelmed in the classroom, has trouble making friends, etc. Be specific about what you've observed at home and what teachers have shared with you."
+                                  aria-required="true"
+                                  data-gramm="true"
+                                  data-gramm-editor="true"
+                                  data-enable-grammarly="true"
+                                  spellcheck="true"></textarea>
+                        <small>Be specific and provide examples. This helps the evaluation team understand what to assess. ✓ Grammar checking enabled</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suspected Disability">Suspected Disability Category (Optional)</label>
+                        <select id="suspectedDisability" name="suspectedDisability">
+                            <option value="">Not sure / Prefer not to specify</option>
+                            <option value="Specific Learning Disability">Specific Learning Disability (SLD) - e.g., Dyslexia, Dyscalculia</option>
+                            <option value="ADHD/Other Health Impairment">ADHD / Other Health Impairment (OHI)</option>
+                            <option value="Autism">Autism Spectrum Disorder (ASD)</option>
+                            <option value="Emotional Disturbance">Emotional Disturbance / Behavioral</option>
+                            <option value="Speech or Language Impairment">Speech or Language Impairment</option>
+                            <option value="Intellectual Disability">Intellectual Disability</option>
+                            <option value="Multiple Disabilities">Multiple Disabilities</option>
+                            <option value="Developmental Delay">Developmental Delay (ages 3-9)</option>
+                            <option value="Other">Other / Unsure</option>
+                        </select>
+                        <small>It's okay if you're not sure - the evaluation will determine this. You can leave this blank.</small>
+                    </div>
+                </fieldset>
+
+                <!-- Previous Interventions/Services -->
+                <fieldset>
+                    <legend>Previous Support & Medical Information (Optional but Recommended)</legend>
+
+                    <div class="form-group">
+                        <label for="previousSupport">Has your child received any support or interventions at school?</label>
+                        <textarea id="previousSupport" name="previousSupport" rows="3"
+                                  placeholder="Example: Reading intervention (RTI/MTSS), counseling, 504 plan, tutoring, behavior support, etc."
+                                  data-gramm="true"
+                                  data-gramm-editor="true"
+                                  data-enable-grammarly="true"
+                                  spellcheck="true"></textarea>
+                        <small>Include any academic interventions, behavioral support, or accommodations. ✓ Grammar checking enabled</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medicalDiagnosis">Has your child been diagnosed with any conditions by a doctor or specialist?</label>
+                        <textarea id="medicalDiagnosis" name="medicalDiagnosis" rows="3"
+                                  placeholder="Example: ADHD, dyslexia, autism, anxiety, sensory processing disorder, etc."
+                                  data-gramm="true"
+                                  data-gramm-editor="true"
+                                  data-enable-grammarly="true"
+                                  spellcheck="true"></textarea>
+                        <small>Include any relevant medical diagnoses (not required, but helpful). ✓ Grammar checking enabled</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="outsideEvaluations">Has your child had any outside evaluations or therapy?</label>
+                        <textarea id="outsideEvaluations" name="outsideEvaluations" rows="3"
+                                  placeholder="Example: Psychological evaluation, speech therapy, occupational therapy, neuropsychological testing, etc."
+                                  data-gramm="true"
+                                  data-gramm-editor="true"
+                                  data-enable-grammarly="true"
+                                  spellcheck="true"></textarea>
+                        <small>Include private evaluations, therapy services, or specialist reports. ✓ Grammar checking enabled</small>
+                    </div>
+                </fieldset>
+
+                <!-- Request Specifics -->
+                <fieldset>
+                    <legend>Evaluation Request Details</legend>
+
+                    <div class="form-group">
+                        <label for="evaluationType">Type of evaluation you are requesting:</label>
+                        <select id="evaluationType" name="evaluationType">
+                            <option value="comprehensive" selected>Comprehensive evaluation (all areas of suspected disability)</option>
+                            <option value="initial">Initial special education evaluation</option>
+                            <option value="reevaluation">Re-evaluation (if child was previously evaluated)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Is there a reason this evaluation is urgent?</label>
+                        <textarea id="urgency" name="urgency" rows="2"
+                                  placeholder="Example: Child is falling significantly behind grade level, at risk of retention, experiencing severe emotional distress, etc."
+                                  data-gramm="true"
+                                  data-gramm-editor="true"
+                                  data-enable-grammarly="true"
+                                  spellcheck="true"></textarea>
+                        <small>Optional - use this if there are time-sensitive concerns. ✓ Grammar checking enabled</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="requestConsent" name="requestConsent" checked>
+                            Request that the school send consent forms immediately
+                        </label>
+                        <small>Recommended - this asks the school to send evaluation consent forms right away so the process can begin</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="requestMeeting" name="requestMeeting" checked>
+                            Request a meeting to discuss my concerns before the evaluation
+                        </label>
+                        <small>Recommended - this gives you a chance to explain your concerns in person</small>
+                    </div>
+                </fieldset>
+
+                <!-- Additional Options -->
+                <fieldset>
+                    <legend>Additional Options</legend>
+
+                    <div class="form-group">
+                        <label for="responseTimeline">How quickly should the school respond? (days)</label>
+                        <select id="responseTimeline" name="responseTimeline">
+                            <option value="5">5 business days</option>
+                            <option value="10" selected>10 business days</option>
+                            <option value="15">15 business days</option>
+                        </select>
+                        <small>Federal law requires response within a "reasonable time" - typically 10-15 business days</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferredContact">Preferred method of contact:</label>
+                        <select id="preferredContact" name="preferredContact">
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="both" selected>Email or Phone</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Generate Letter</button>
+                    <button type="reset" class="btn-secondary">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="privacy-notice">
+            <h3>Privacy Notice</h3>
+            <p>
+                <strong>All information you enter stays on your device.</strong> This application runs entirely
+                in your web browser - no data is sent to any server or database. Your information is completely
+                private and secure.
+            </p>
+            <p>
+                <strong>Grammar Checking:</strong> If you have Grammarly, LanguageTool, or similar browser extensions installed,
+                they will work with this form to help you write professionally. These extensions operate according to their
+                own privacy policies. You can use this form without any extensions - built-in spell check is also available.
+            </p>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <h2>Support This Free Tool</h2>
+            <p>
+                This tool is completely free and open source. If it helped you advocate for your child's education,
+                consider supporting our mission to keep it free for all families who need it.
+            </p>
+            <div class="kofi-container">
+                <iframe id='kofiframe'
+                        src='https://ko-fi.com/givemykidaniep/?hidefeed=true&widget=true&embed=true&preview=true'
+                        style='border:none;width:100%;padding:4px;background:#f9f9f9;'
+                        height='712'
+                        title='Support Give My Kid an IEP'
+                        loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <strong>Disclaimer:</strong> This tool provides information and generates letters based on federal
+                special education law (IDEA). It does not constitute legal advice. For specific legal questions,
+                consult with a special education attorney or advocate.
+            </p>
+            <p>
+                <a href="https://github.com/avophile/give-my-kid-an-IEP" target="_blank">View on GitHub</a> |
+                <a href="CONTRIBUTING.md">Contribute</a> |
+                Open Source for Educational and Advocacy Use
+            </p>
+        </div>
+    </footer>
+
+    <!-- PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="src/js/form-handler.js"></script>
+    <script src="src/js/letter-generator.js"></script>
+    <script src="src/js/pdf-generator.js"></script>
+</body>
+</html>

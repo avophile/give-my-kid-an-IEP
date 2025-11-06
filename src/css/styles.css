@@ -124,24 +124,34 @@ header .container {
 
 /* Ko-fi button in header */
 header .kofi-button-container {
-    position: absolute;
-    bottom: var(--spacing-md);
+    position: fixed;
+    bottom: auto;
+    top: var(--spacing-md);
     right: var(--spacing-lg);
-    z-index: 10;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: auto;
+    height: auto;
 }
 
 header .kofi-button-container button {
     cursor: pointer;
     background: transparent !important;
     border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+header .kofi-button-container iframe {
+    width: auto !important;
+    height: auto !important;
 }
 
 @media (max-width: 768px) {
     header .kofi-button-container {
-        bottom: var(--spacing-sm);
+        top: var(--spacing-sm);
         right: var(--spacing-md);
     }
 }

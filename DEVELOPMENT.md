@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Abolish Kid Jail is a web application that helps parents generate professional demand letters for manifestation determination hearings when their special education student faces disciplinary action.
+Give My Kid an IEP is a web application that helps parents generate professional evaluation request letters to request special education evaluations for their children under federal IDEA law.
 
 ## Technical Architecture (Proposed)
 
@@ -34,92 +34,93 @@ The application should be:
 
 Start with **Option 1** (static site) for MVP, then migrate to Option 2 if needed.
 
-## Project Structure (Proposed)
+## Project Structure
 
 ```
-abolish-kid-jail/
+give-my-kid-an-IEP/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── DEVELOPMENT.md
+├── NETLIFY_DEPLOYMENT.md
 ├── LICENSE
 ├── .gitignore
+├── netlify.toml                   # Netlify configuration
 │
 ├── docs/                          # Documentation
-│   ├── manifestation-determination-guide.md
-│   ├── letter-template.md
-│   ├── preparing-for-hearing.md
-│   └── state-specific/
-│       ├── california.md
-│       └── ...
+│   ├── iep-evaluation-guide.md
+│   ├── parent-rights-guide.md
+│   └── ...
+│
+├── index.html                     # Main application page
+├── resources.html                 # Educational resources
+├── preparing.html                 # What to expect guide
 │
 ├── src/                           # Source code
-│   ├── index.html                 # Main application page
 │   ├── css/
 │   │   └── styles.css
-│   ├── js/
-│   │   ├── form-handler.js        # Collect user input
-│   │   ├── letter-generator.js    # Generate letter content
-│   │   └── pdf-generator.js       # Create PDF from content
-│   └── templates/
-│       └── letter-template.js     # Letter template(s)
+│   └── js/
+│       ├── form-handler.js        # Collect user input and form validation
+│       ├── letter-generator.js    # Generate letter content from form data
+│       └── pdf-generator.js       # Create PDF from content
 │
-├── assets/                        # Static assets
-│   ├── images/
-│   └── fonts/
-│
-└── tests/                         # Tests
-    └── ...
+└── _redirects                     # Netlify redirects configuration
 ```
 
-## Core Features - MVP
+## Core Features
 
 ### 1. User Input Form
 
 Collect essential information:
-- Parent/guardian name and contact information
-- Student name and school information
-- District information
-- Date(s) of disciplinary action
-- Type of disciplinary action (suspension, expulsion recommendation, etc.)
-- Number of days (if suspension)
-- Brief description of the incident
-- Student's disability category (optional, for context)
-- Current IEP date
+- Parent/guardian name, address, phone, and email
+- Student name, grade level, and date of birth
+- School name, address, and principal
+- School district name and special education director (optional)
+- Areas of concern (reading, math, attention, behavior, social, speech, motor, sensory, cognitive, etc.)
+- Detailed description of concerns
+- Suspected disability category (optional)
+- Previous interventions and support services (optional)
+- Medical diagnoses (optional)
+- Outside evaluations or therapy (optional)
+- Type of evaluation requested (comprehensive, initial, re-evaluation)
+- Urgency details (optional)
+- Preferred response timeline and contact method
 
 ### 2. Letter Generation
 
-Template should include:
+Template includes:
 - Professional letterhead-style formatting
-- Date
-- Addressed to appropriate school officials (principal, special education director)
-- Clear subject line: "Demand for Manifestation Determination Review"
+- Current date
+- Addressed to principal and special education director
+- Clear subject line: "Request for Comprehensive Special Education Evaluation"
 - Body paragraphs:
-  - Statement of facts (what happened, when, disciplinary action taken)
-  - Citation of legal requirement under IDEA
-  - Explicit demand for manifestation determination hearing
-  - Timeline reference (must occur within 10 school days)
-  - Request for student's educational records relevant to the hearing
-  - Parent's contact information for scheduling
-  - Statement preserving all rights under IDEA
+  - Statement of child's specific areas of concern with examples
+  - Reference to parent's legal right to request evaluation under IDEA
+  - Description of previous interventions and student's response
+  - Any relevant medical diagnoses or outside evaluations
+  - Explicit request for evaluation and assessment in all suspected areas
+  - Request for consent forms and evaluation timeline
+  - Request for pre-evaluation meeting (optional)
+  - Parent contact information
+  - Statement preserving all parent rights under IDEA
 - Professional closing
 - Parent signature line
 
 ### 3. PDF Export
 
-- Generate clean, printable PDF
-- Include proper formatting
-- Ensure accessibility (screen reader compatible)
-- Option to download or print directly
+- Generate clean, professional, printable PDF
+- Proper formatting with appropriate margins and spacing
+- Accessible to all parents
+- Option to download or print directly from browser
 
 ### 4. Educational Resources
 
-Simple pages explaining:
-- What is a manifestation determination hearing?
-- When is it required?
-- What happens during the hearing?
-- What rights do parents have?
-- How to prepare
-- What to do if you disagree with the outcome
+Pages explaining:
+- Parent rights under IDEA to request evaluations
+- What the evaluation process entails
+- What to expect at each stage
+- How to prepare documentation
+- Understanding evaluation results
+- Next steps after evaluation
 
 ## Implementation Phases
 

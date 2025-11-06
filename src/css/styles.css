@@ -116,6 +116,29 @@ header::before {
 header .container {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ko-fi button in header */
+.kofi-button-container {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-md);
+    z-index: 10;
+}
+
+.kofi-button-container button {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .kofi-button-container {
+        bottom: var(--spacing-xs);
+        right: var(--spacing-sm);
+    }
 }
 
 header h1 {

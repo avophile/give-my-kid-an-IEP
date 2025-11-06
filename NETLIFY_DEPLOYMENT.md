@@ -1,12 +1,12 @@
 # Netlify Deployment Guide
 
-This guide walks you through deploying the Abolish Kid Jail application to Netlify.
+This guide walks you through deploying the Give My Kid an IEP application to Netlify.
 
 ## Quick Deploy
 
 The fastest way to deploy:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/avophile/abolish-kid-jail)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/avophile/give-my-kid-an-IEP)
 
 ## Manual Deployment Steps
 
@@ -21,7 +21,7 @@ The fastest way to deploy:
 2. Click **"Add new site"** → **"Import an existing project"**
 3. Click **"Deploy with GitHub"** (or your git provider)
 4. Authorize Netlify to access your repositories
-5. Select the `abolish-kid-jail` repository
+5. Select the `give-my-kid-an-IEP` repository
 
 ### 3. Configure Build Settings
 
@@ -45,8 +45,8 @@ Netlify will:
 
 1. Go to **Site settings** → **General** → **Site details**
 2. Click **"Change site name"**
-3. Enter your preferred name (e.g., `abolish-kid-jail`)
-4. Your site will be at `https://abolish-kid-jail.netlify.app`
+3. Enter your preferred name (e.g., `give-my-kid-an-iep`)
+4. Your site will be at `https://give-my-kid-an-iep.netlify.app`
 
 ### 6. Add Custom Domain (Optional)
 
@@ -170,7 +170,7 @@ For Netlify-specific issues:
 - [Netlify Support](https://www.netlify.com/support/)
 
 For application issues:
-- [Open an issue on GitHub](https://github.com/avophile/abolish-kid-jail/issues)
+- [Open an issue on GitHub](https://github.com/avophile/give-my-kid-an-IEP/issues)
 
 ## Cost
 
@@ -194,4 +194,4 @@ After deployment:
 
 ---
 
-**Your site is now live and helping parents protect their children's rights!** 🎉
+**Your site is now live and helping parents get their children the support they need!** 🎉

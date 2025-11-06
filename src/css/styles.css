@@ -123,21 +123,26 @@ header .container {
 }
 
 /* Ko-fi button in header */
-.kofi-button-container {
+header .kofi-button-container {
     position: absolute;
-    bottom: var(--spacing-sm);
-    right: var(--spacing-md);
+    bottom: var(--spacing-md);
+    right: var(--spacing-lg);
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.kofi-button-container button {
+header .kofi-button-container button {
     cursor: pointer;
+    background: transparent !important;
+    border: none !important;
 }
 
 @media (max-width: 768px) {
-    .kofi-button-container {
-        bottom: var(--spacing-xs);
-        right: var(--spacing-sm);
+    header .kofi-button-container {
+        bottom: var(--spacing-sm);
+        right: var(--spacing-md);
     }
 }
 
